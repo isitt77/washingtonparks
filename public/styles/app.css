@@ -1,0 +1,10 @@
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+#map{
+    width: 90%; 
+    height: 600px;
+}
