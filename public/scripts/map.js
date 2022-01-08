@@ -1,8 +1,8 @@
 mapboxgl.accessToken = "pk.eyJ1IjoiaXNpdHQ3NyIsImEiOiJja3dvam45NjAwM2oyMndqdjNzdHNpZGtmIn0.N1zn-7deVgeJLaqFawePDg";
 const map = new mapboxgl.Map({
     container: 'map', // container ID
-    center: [-120.7401, 47.7511], // starting position [lng, lat]
-    zoom: 6, // starting zoom
+    center: [-120.7401, 47.40], // starting position [lng, lat]
+    zoom: 6.3, // starting zoom
     style: 'mapbox://styles/mapbox/streets-v11', // style URL or style object
     // hash: true, // sync `center`, `zoom`, `pitch`, and `bearing` with URL
     // Use `transformRequest` to modify requests that begin with `http://myHost`.
