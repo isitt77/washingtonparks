@@ -15,9 +15,10 @@ function fetchData() {
                 // console.log(f.attributes)
                 return `<p>${f.attributes.OBJECTID}. ${f.attributes.ParkName} ${f.geometry.rings[0]}</p>`
             }).join(" ")
-            console.log(features)
+            // console.log(features)
             document.querySelector("#app")
                 .insertAdjacentHTML("afterbegin", features)
+            return features
 
         })
         .catch(err => {
