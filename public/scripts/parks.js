@@ -9,13 +9,13 @@ function fetchData() {
             return res.json()
         })
         .then(data => {
-
+            // console.log(data)
             // Video 3's loop (.map) 
             const features = data.features.map(f => {
                 // console.log(f.attributes)
-                return `<h1>${f.attributes.OBJECTID}. ${f.attributes.ParkName}</h1>`
+                return `<p>${f.attributes.OBJECTID}. ${f.attributes.ParkName} ${f.geometry.rings[0]}</p>`
             }).join(" ")
-            // console.log(features)
+            console.log(features)
             document.querySelector("#app")
                 .insertAdjacentHTML("afterbegin", features)
 
