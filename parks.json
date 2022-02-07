@@ -144,27 +144,32 @@
             "defaultValue": null
         }
     ],
+    "type": "FeatureCollection",
     "features": [
         {
-            "attributes": {
-                "OBJECTID": 261,
-                "DES": 12,
-                "DESCRIPT": "Recreation included in Long-Term Boundary",
-                "ComAprDate": 1344729600000,
-                "Type": 1,
-                "Status": 2,
-                "ParkCode": 0,
-                "Affix": "State Park Conservation Area",
-                "Document": "N:\\_COMMISSION\\Commission Meeting-Agenda Items\\2012\\Aug 8 2012 Wenatchee\\Item E 3 Green River Gorge Conservation AreaNolte State Park-Long Term Boundary Revision-FINAL.doc",
-                "Basis": "CAMP",
-                "Comments": "orig:  04/18/1997 - revised 11/13/2008 - revised 08/08/2012",
-                "ParkName": "Green River Gorge",
-                "Acres": 60.9981481835272,
-                "Shape__Area": 536430.75,
-                "Shape__Length": 5214.64839106643
+            "type": "Feature",
+            "properties": {
+                "attributes": {
+                    "OBJECTID": 261,
+                    "DES": 12,
+                    "DESCRIPT": "Recreation included in Long-Term Boundary",
+                    "ComAprDate": 1344729600000,
+                    "Type": 1,
+                    "Status": 2,
+                    "ParkCode": 0,
+                    "Affix": "State Park Conservation Area",
+                    "Document": "N:\\_COMMISSION\\Commission Meeting-Agenda Items\\2012\\Aug 8 2012 Wenatchee\\Item E 3 Green River Gorge Conservation AreaNolte State Park-Long Term Boundary Revision-FINAL.doc",
+                    "Basis": "CAMP",
+                    "Comments": "orig:  04/18/1997 - revised 11/13/2008 - revised 08/08/2012",
+                    "ParkName": "Green River Gorge",
+                    "Acres": 60.9981481835272,
+                    "Shape__Area": 536430.75,
+                    "Shape__Length": 5214.64839106643
+                }
             },
             "geometry": {
-                "rings": [
+                "type": "Polygon",
+                "coordinates": [
                     [
                         [
                             -121.959828957288,
