@@ -17,11 +17,15 @@ function fetchData() {
                 // return `<p>${f.attributes.OBJECTID}. ${f.attributes.ParkName} ${f.geometry.rings[0]}</p>`
                 const a = f.attributes.ParkName
                 const g = f.geometry.rings
-                return [a, g]
+                const featureCollection = [a, g]
+                console.log(featureCollection)
+                return featureCollection
             }).join(" ")
-            console.log(features)
+            // console.log(features)
             // document.querySelector("#app")
             //     .insertAdjacentHTML("afterbegin", features)
+            // console.log(featureCollection)
+            // return featureCollection
             // return features
 
         })
