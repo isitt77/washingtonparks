@@ -16,9 +16,13 @@ function fetchData() {
                 // console.log(f.attributes)
                 // return `<p>${f.attributes.OBJECTID}. ${f.attributes.ParkName} ${f.geometry.rings[0]}</p>`
                 const a = f.attributes.ParkName
-                const g = f.geometry.rings
-                const featureCollection = [a, g]
-                console.log(featureCollection)
+                const g = f.geometry.rings[0]
+                // const featureCollection = [a, g]
+                const featureCollection = {
+                    parkName: a,
+                    geometry: g
+                }
+                // console.log(featureCollection)
                 return featureCollection
             }).join(" ")
             // console.log(features)
