@@ -24,7 +24,8 @@ function fetchData() {
                 }
                 // console.log(featureCollection)
                 return featureCollection
-            }).join(" ")
+            })
+            // .join(" ")
             // console.log(features)
             // document.querySelector("#app")
             //     .insertAdjacentHTML("afterbegin", features)
