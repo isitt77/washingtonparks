@@ -10,7 +10,7 @@ function fetchData() {
             return res.json()
         })
         .then(data => {
-            // console.log(data)
+            console.log(data)
             // Video 3's loop (.map) 
             const features = data.features.map(f => {
                 // console.log(f.attributes)
@@ -23,7 +23,8 @@ function fetchData() {
                     geometry: g
                 }
                 // console.log(featureCollection)
-                return featureCollection
+                // return featureCollection
+                // return data
             })
             // .join(" ")
             // console.log(features)
