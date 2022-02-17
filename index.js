@@ -21,16 +21,16 @@ app.use(express.static(path.join(__dirname, "public")))
 // process.env.DB_URL ||
 const mongoUrl = "mongodb://localhost:27017/parks" // <-- for development
 mongoose.connect(mongoUrl, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+    // useNewUrlParser: true,
+    // useCreateIndex: true,
+    // useUnifiedTopology: true,
+    // useFindAndModify: false
 })
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Connection error:"))
 db.once("open", () => {
-    console.log("database connected")
+    console.log("parks database connected")
 })
 
 
