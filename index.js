@@ -6,7 +6,8 @@ const express = require("express");
 const app = express()
 const path = require("path")
 const mongoose = require("mongoose")
-const methodOverride = require("method-override")
+const methodOverride = require("method-override");
+const Park = require("./models/park");
 
 
 app.set("view engine", "ejs")
@@ -35,8 +36,9 @@ db.once("open", () => {
 
 
 
-app.get("/", (req, res) => {
-    res.render("index")
+app.get("/", async (req, res) => {
+    const parks = await Park.find({})
+    res.render("index", { parks })
 })
 
 
