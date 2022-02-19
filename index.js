@@ -44,7 +44,7 @@ app.get("/", async (req, res) => {
 
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || process.env.LOCALHOST
 
 app.listen(port, () => {
     console.log(`Serving Washington Parks on port ${port}...`)
