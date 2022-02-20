@@ -16,7 +16,8 @@ const parkSchema = new Schema({
         }
     },
     properties: {
-        parkName: String
+        parkName: String,
+        webPage: String
     }
 
 })
