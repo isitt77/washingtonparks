@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Park = require("../models/park");
-const Campground = require("../models/park");
 
 // mongoose.connect("mongodb://localhost:27017/stateParkSite", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
 mongoose.connect("mongodb://localhost:27017/stateParkSite")
