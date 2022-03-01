@@ -1762,7 +1762,8 @@ map.on('load', () => {
 
     map.addLayer({
         id: 'parks',
-        type: 'fill',
+        // type: 'fill',
+        type: 'line',
         source: 'parks',
         // filter: ['==', '$type', 'Polygon'],
         layout: {},
@@ -1772,9 +1773,11 @@ map.on('load', () => {
             //   * Blue, 20px circles when point count is less than 100
             //   * Yellow, 30px circles when point count is between 100 and 750
             //   * Pink, 40px circles when point count is greater than or equal to 750
-            'fill-outline-color': '#F08080',
-            'fill-color': '#F08080',
-            'fill-opacity': 0.75
+            // 'fill-outline-color': '#F08080',
+            // 'fill-color': '#F08080',
+            // 'fill-opacity': 0.75,
+            'line-color': '#F08080',
+            'line-width': 5
             // 'circle-color': [
             //     'step',
             //     ['get', 'point_count'],
