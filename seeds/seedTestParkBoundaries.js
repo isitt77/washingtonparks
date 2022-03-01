@@ -15,6 +15,8 @@ db.once("open", () => {
 const seedDB = async () => {
     await Park.deleteMany({})
     const park = new Park({
+        type: "Feature",
+        id: 1,
         geometry: {
             type: "Polygon",
             coordinates: [

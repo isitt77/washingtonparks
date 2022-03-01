@@ -4,6 +4,12 @@ const Schema = mongoose.Schema;
 
 const parkSchema = new Schema({
 
+    type: {
+        type: String,
+        enum: ["Feature"],
+        required: true
+    },
+    id: Number,
     geometry: {
         type: {
             type: String,
