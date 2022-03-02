@@ -6,26 +6,32 @@ const parkSchema = new Schema({
 
     type: {
         type: String,
-        enum: ["Feature"],
+        enum: ["FeatureCollection"],
         required: true
     },
-    id: Number,
-    geometry: {
+    features: [{
         type: {
             type: String,
-            enum: ["Polygon"],
+            enum: ["Feature"],
             required: true
         },
-        coordinates: {
-            type: [[[Number]]],
-            required: true
+        id: Number,
+        geometry: {
+            type: {
+                type: String,
+                enum: ["Polygon"],
+                required: true
+            },
+            coordinates: {
+                type: [[[Number]]],
+                required: true
+            }
+        },
+        properties: {
+            parkName: String,
+            webPage: String
         }
-    },
-    properties: {
-        parkName: String,
-        webPage: String
-    }
-
+    }]
 })
 
 const Park = mongoose.model("Park", parkSchema);
