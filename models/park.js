@@ -28,8 +28,8 @@ const parkSchema = new Schema({
             }
         },
         properties: {
-            parkName: String,
-            webPage: String
+            ParkName: String,
+            WebPage: String
         }
     }]
 })
