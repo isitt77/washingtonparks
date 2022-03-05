@@ -21,14 +21,17 @@
             <div id="map"></div>
         </div>
     </div>
-    <% for(let park of parks){ %>
+    <% for(let park of parks){
+         for(let i=0; i < park.features.length; i++){ %> 
         <h1>
-            <%= park.features[0].properties.ParkName%>
+            <%= park.features[i].properties.ParkName%>
+            <%= //p.features.properties.ParkName%>
         </h1>
         <h2>
             <!-- <a href="<%= //park.features[0].properties.WebPage %>" target="_blank">Website</a> -->
         </h2>
-        <% } %>
+        <%}
+         } %>
 
             <div id="app" class="container"></div>
 
