@@ -23,10 +23,10 @@
     </div>
     <% for(let park of parks){ %>
         <h1>
-            <%= //park.properties.parkName%>
+            <%= park.features[0].properties.ParkName%>
         </h1>
         <h2>
-            <a href="<%= //park.properties.webPage %>" target="_blank">Website</a>
+            <!-- <a href="<%= //park.features[0].properties.WebPage %>" target="_blank">Website</a> -->
         </h2>
         <% } %>
 
