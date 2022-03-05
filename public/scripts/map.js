@@ -1778,7 +1778,7 @@ map.on('load', () => {
             // 'fill-outline-color': '#F08080',
             // 'fill-color': '#F08080',
             // 'fill-opacity': 0.75,
-            'line-color': '#F08080',
+            'line-color': '#008000',
             'line-width': 5
             // 'circle-color': [
             //     'step',
