@@ -1,5 +1,5 @@
 // MapBox
-mapboxgl.accessToken = "pk.eyJ1IjoiaXNpdHQ3NyIsImEiOiJja3dvam45NjAwM2oyMndqdjNzdHNpZGtmIn0.N1zn-7deVgeJLaqFawePDg";
+mapboxgl.accessToken = "pk.eyJ1IjoiaXNpdHQ3NyIsImEiOiJjbDBmMWQ2czAwbmQ0M2Nwb2wzaTJ1Y3doIn0.09Q4bcCYc3jYEDgUcICLXQ";
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     center: [-120.7401, 47.40], // starting position [lng, lat]
