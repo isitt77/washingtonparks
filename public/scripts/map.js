@@ -1,51 +1,3 @@
-// Parks
-const ParksApi = "https://services5.arcgis.com/4LKAHwqnBooVDUlX/arcgis/rest/services/LandClassification/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json"
-
-function fetchData() {
-    fetch(ParksApi)
-        .then(res => {
-            if (!res.ok) {
-                throw Error("Response not ok.")
-            }
-            return res.json()
-        })
-        .then(data => {
-            // console.log(data)
-            // Video 3's loop (.map) 
-            const features = data.features.map(f => {
-                // console.log(f.attributes)
-                // return `<p>${f.attributes.OBJECTID}. ${f.attributes.ParkName} ${f.geometry.rings[0]}</p>`
-                const a = f.attributes.ParkName
-                const g = f.geometry.rings[0]
-                // const featureCollection = [a, g]
-                const featureCollection = {
-                    parkName: a,
-                    geometry: g
-                }
-                // console.log(featureCollection)
-                // return featureCollection
-                // return data
-            })
-            // .join(" ")
-            // console.log(features)
-            // document.querySelector("#app")
-            //     .insertAdjacentHTML("afterbegin", features)
-            // console.log(featureCollection)
-            // return featureCollection
-            // return features
-
-        })
-        .catch(err => {
-            console.log(err)
-        })
-}
-
-// fetchData()
-
-
-// console.log(parkFeatures)
-// console.log(park)
-
 // MapBox
 mapboxgl.accessToken = "pk.eyJ1IjoiaXNpdHQ3NyIsImEiOiJja3dvam45NjAwM2oyMndqdjNzdHNpZGtmIn0.N1zn-7deVgeJLaqFawePDg";
 const map = new mapboxgl.Map({
@@ -77,13 +29,7 @@ map.on('load', () => {
     // add the point_count property to your source data.
     map.addSource('parks', {
         type: 'geojson',
-        // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
-        // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
-        // data: parkFeatures, // <-- Not valid geojson object.
         data: parks
-        // cluster: true,
-        // clusterMaxZoom: 14, // Max zoom to cluster points on
-        // clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
     });
 
     map.addLayer({
@@ -95,10 +41,6 @@ map.on('load', () => {
         layout: {},
         paint: {
             // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
-            // with three steps to implement three types of circles:
-            //   * Blue, 20px circles when point count is less than 100
-            //   * Yellow, 30px circles when point count is between 100 and 750
-            //   * Pink, 40px circles when point count is greater than or equal to 750
             // 'fill-outline-color': '#F08080',
             // 'fill-color': '#F08080',
             // 'fill-opacity': 0.75,
