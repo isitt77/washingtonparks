@@ -61,7 +61,7 @@ map.on('load', () => {
 
         // Copy coordinates array.
         const coordinates = e.features[0].geometry.coordinates.slice();
-        const description = e.features[0].properties.description;
+        const ParkName = e.features[0].properties.ParkName;
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
@@ -72,7 +72,7 @@ map.on('load', () => {
 
         // Populate the popup and set its coordinates
         // based on the feature found.
-        popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        popup.setLngLat(coordinates).setHTML(ParkName).addTo(map);
     });
 
     map.on('mouseleave', 'parks', () => {
