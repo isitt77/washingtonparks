@@ -55,7 +55,7 @@ map.on('load', () => {
         closeOnClick: false
     });
 
-    map.on('mouseenter', 'places', (e) => {
+    map.on('mouseenter', 'parks', (e) => {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer';
 
@@ -75,7 +75,7 @@ map.on('load', () => {
         popup.setLngLat(coordinates).setHTML(description).addTo(map);
     });
 
-    map.on('mouseleave', 'places', () => {
+    map.on('mouseleave', 'parks', () => {
         map.getCanvas().style.cursor = '';
         popup.remove();
     });
