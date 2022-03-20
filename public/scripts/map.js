@@ -41,8 +41,8 @@ map.on('load', () => {
         layout: {},
         paint: {
             // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
-            'fill-outline-color': '#F08080',
-            'fill-color': '#F08080',
+            'fill-outline-color': '#008000',
+            'fill-color': '#008000',
             'fill-opacity': 0.75,
             // 'line-color': '#008000',
             // 'line-width': 5
