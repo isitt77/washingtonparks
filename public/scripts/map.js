@@ -34,18 +34,18 @@ map.on('load', () => {
 
     map.addLayer({
         id: 'parks',
-        // type: 'fill',
-        type: 'line',
+        type: 'fill',
+        // type: 'line',
         source: 'parks',
         // filter: ['==', '$type', 'Polygon'],
         layout: {},
         paint: {
             // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
-            // 'fill-outline-color': '#F08080',
-            // 'fill-color': '#F08080',
-            // 'fill-opacity': 0.75,
-            'line-color': '#008000',
-            'line-width': 5
+            'fill-outline-color': '#F08080',
+            'fill-color': '#F08080',
+            'fill-opacity': 0.75,
+            // 'line-color': '#008000',
+            // 'line-width': 5
         }
     });
 
