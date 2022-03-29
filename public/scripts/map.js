@@ -72,7 +72,7 @@ map.on('load', () => {
 
         // Populate the popup and set its coordinates
         // based on the feature found.
-        popup.setLngLat(coordinates).setHTML(ParkName).addTo(map);
+        popup.setLngLat(coordinates).setHTML(ParkName).addTo(map).trackPointer();
     });
 
     map.on('mouseleave', 'parks', () => {
