@@ -32,20 +32,29 @@ map.on('load', () => {
         data: parks
     });
 
+    // Polygon line
+    map.addLayer({
+        id: 'parks-line',
+        type: 'line',
+        source: 'parks',
+        layout: {},
+        paint: {
+            'line-color': '#008000',
+            'line-width': 5
+        }
+    });
+
+    // Polygon fill
     map.addLayer({
         id: 'parks',
         type: 'fill',
-        // type: 'line',
         source: 'parks',
-        // filter: ['==', '$type', 'Polygon'],
         layout: {},
         paint: {
             // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
-            'fill-outline-color': '#008000',
+            // 'fill-outline-color': '#008000',
             'fill-color': '#008000',
-            'fill-opacity': 0.75,
-            // 'line-color': '#008000',
-            // 'line-width': 5
+            'fill-opacity': 0.75
         }
     });
 
