@@ -19,11 +19,11 @@ const parkSchema = new Schema({
         geometry: {
             type: {
                 type: String,
-                enum: ["MultiPolygon"],
+                // enum: ["MultiPolygon"],
                 required: true
             },
             coordinates: {
-                type: [[[Number]]],
+                type: [[[[Number]]]],
                 required: true
             }
         },
