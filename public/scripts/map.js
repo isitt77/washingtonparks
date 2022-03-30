@@ -54,7 +54,7 @@ map.on('load', () => {
             // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
             // 'fill-outline-color': '#008000',
             'fill-color': '#008000',
-            'fill-opacity': 0
+            'fill-opacity': 0.75
         }
     });
 
