@@ -46,8 +46,9 @@ map.on('load', () => {
 
     // Polygon fill
     map.addLayer({
-        id: 'parks',
+        id: 'parks-fill',
         type: 'fill',
+        // filter: ["==", ["within", "parks"], true],
         source: 'parks',
         layout: {},
         paint: {
@@ -64,7 +65,7 @@ map.on('load', () => {
         closeOnClick: false
     });
 
-    map.on('mouseenter', 'parks', (e) => {
+    map.on('mouseenter', 'parks-fill', (e) => {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer';
 
@@ -84,7 +85,7 @@ map.on('load', () => {
         popup.setLngLat(coordinates).setHTML(ParkName).addTo(map).trackPointer();
     });
 
-    map.on('mouseleave', 'parks', () => {
+    map.on('mouseleave', 'parks-fill', () => {
         map.getCanvas().style.cursor = '';
         popup.remove();
     });
