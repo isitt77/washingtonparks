@@ -69,7 +69,7 @@ map.on('load', () => {
         map.getCanvas().style.cursor = 'pointer';
 
         // Copy coordinates array.
-        const coordinates = e.features[0].geometry.coordinates[0][0].slice();
+        const coordinates = e.features[0].geometry.coordinates[0][0][0].slice();
         const ParkName = e.features[0].properties.ParkName;
         // console.log(coordinates)
         // Ensure that if the map is zoomed out such that multiple
