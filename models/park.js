@@ -6,13 +6,13 @@ const parkSchema = new Schema({
 
     type: {
         type: String,
-        enum: ["FeatureCollection"],
+        // enum: ["FeatureCollection"],
         required: true
     },
     features: [{
         type: {
             type: String,
-            enum: ["Feature"],
+            // enum: ["Feature"],
             required: true
         },
         id: Number,
